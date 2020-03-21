@@ -1,0 +1,4 @@
+
+SPOTIFY = "Spotify"
+YOUTUBE = "YouTube"
+

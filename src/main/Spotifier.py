@@ -6,7 +6,7 @@ from src.main.controllers.console import console_controller
 
 
 def check_properties_ok():
-    if spotify_properties.username == "DEFAULT" or spotify_properties.api_key == "DEFAULT":
+    if spotify_properties.client_id == "DEFAULT" or spotify_properties.client_secret == "DEFAULT":
         logger.warning("Load your Spotify properties on properties.py and restart applicacion")
         sys.exit()
 
