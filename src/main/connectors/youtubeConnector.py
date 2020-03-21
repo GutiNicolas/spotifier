@@ -11,7 +11,7 @@ class youtube_connector:
     def __init__(self):
         global logger
         logger = LOGGER.getLogger(__name__)
-        logger.info("Initialaizing Spotify connector")
+        logger.info("Initialaizing YouTube connector")
 
     # Logs into YouTube
     # from YouTube Data API Doc
@@ -21,7 +21,7 @@ class youtube_connector:
 
         api_service_name = "youtube"
         api_version = "v3"
-        client_secrets_file = "client_secret.json"
+        client_secrets_file = "client_secrets.json"
 
         # Get credentials and create an API client
         scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
