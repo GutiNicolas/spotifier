@@ -1,5 +1,7 @@
 # Spotifier
 properties.py
+properties.*
+properties*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
