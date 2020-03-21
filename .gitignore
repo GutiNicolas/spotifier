@@ -139,5 +139,5 @@ dmypy.json
 
 
 /workspace.xml
-*.xml
 *.iml
+/src/properties.py
