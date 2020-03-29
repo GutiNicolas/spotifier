@@ -16,13 +16,14 @@ def check_properties_ok():
 
     logger.info("All properties are OK, initializing server")
 
-def load_menu():
-    console_controller.init(None)
+def load_menu(path):
+    console_controller.init(None, path)
 
 def init():
     try:
-        path = str(Path(__file__).parent.absolute()).replace('src/main', 'logs/{}')
-        logging.basicConfig(filename=path.format(logging_properties.logging_filename), format=logging_properties.logging_template, level=logging.INFO)
+        path = str(Path(__file__).parent.absolute())
+        log_path = path.replace('src/main', 'logs/{}')
+        logging.basicConfig(filename=log_path.format(logging_properties.logging_filename), format=logging_properties.logging_template, level=logging.INFO)
 
         console_handler = logging.StreamHandler(sys.stdout)
         console_handler.setFormatter(logging.Formatter(logging_properties.logging_template))
@@ -34,8 +35,8 @@ def init():
         logger.info("Loading SPOTIFIER")
 
         # check_properties_ok()
-
-        load_menu()
+        logger.info("Current App path set to {}".format(path))
+        load_menu(path)
 
 
     except Exception as ex:
