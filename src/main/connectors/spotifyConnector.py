@@ -36,7 +36,7 @@ class spotify_connector:
 
         return r_json["id"]
 
-    def search_for_song(self, song_name, artist_name):
+    def search_for_song(self, artist_name, song_name):
         query = SPOTIFY_SONG_QUERY_ENDPOINT.format(song_name, artist_name)
         logger.info("[SFS] Sending Search Song get request to Spotify. Query is [{}]".format(query))
         r = requests.get(query, headers=DEFAULT_HEADERS)
