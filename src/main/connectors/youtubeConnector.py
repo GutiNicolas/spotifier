@@ -31,7 +31,7 @@ class youtube_connector:
 
         api_service_name = "youtube"
         api_version = "v3"
-        client_secrets_file = path.replace('main', '{}').format("client_secrets.json")
+        client_secrets_file = path.replace('main', 'client_secrets.json')
 
         if(not os.path.exists(client_secrets_file)):
             self.create_secrent_file_and_warn(client_secrets_file)

@@ -14,7 +14,7 @@ def load_menu():
         print("[ ANY ] Exit")
         option = input()
         if option == '1':
-            print("Please paste you Spotify playlist link now")
+            print("Please paste you YouTube playlist link now")
             playlist_link = input()
             if StringUtils.is_empty(playlist_link):
                 logger.info("Playlist link cannot be empty, try again")

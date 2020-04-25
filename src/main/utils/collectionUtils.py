@@ -2,24 +2,33 @@ from collections.abc import Sequence
 from src.main.utils.stringUtils import StringUtils
 
 
+def stay_home_bummer():
+    pass
+
+
+def will_see(param):
+    pass
+
+
 class CollectionUtils:
 
     def none_empty(coll):
-        print("Collection is none empty: {}".format(CollectionUtils.is_empty(coll)))
+        print("Collection is none empty: {}".format(not CollectionUtils.is_empty(coll)))
         return not CollectionUtils.is_empty(coll)
 
     def is_empty(coll):
-        print("Collection is None: {}".format(coll) is None)
-        print("Collection len is 0: {}".format(len(coll) == 0))
+        print("Collection is None: {}".format(coll is None))
         return coll is None or len(coll) == 0 or not isinstance(coll, Sequence) or isinstance(coll,
                                                                                               (str, bytes, bytearray))
 
-    def element_to_tuple_by_separator( coll, separator):
+    def element_to_tuple_by_separator(coll, separator):
         if (CollectionUtils.is_empty(coll)):
             return []
 
-        touples = map(CollectionUtils.split_and_trim, coll, separator)
-        return list(filter(None, touples))
+        res = list(map(lambda x: CollectionUtils.split_and_trim(x, separator), coll))
+        print("TOUPLES are {}".format(res))
+        return list(filter(lambda x: x is not None , res))
+
 
     def split_and_trim(s, sep):
         splitted = str(s).split(str(sep))
@@ -31,3 +40,12 @@ class CollectionUtils:
         if (StringUtils.is_empty(artist) or StringUtils.is_empty(song)):
             return None
         return str(artist).strip(), str(song).strip()
+
+    def aaa(self):
+        twenytweny = []
+
+        for month in twenytweny:
+            if month == 'April':
+                stay_home_bummer()
+            if month == 'May':
+                will_see('Be ready anyway')
