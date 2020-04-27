@@ -1,4 +1,5 @@
 import re
+from fuzzywuzzy import fuzz
 
 not_deseable_words = ["Lyrics", "Lyric", "Live at", "Official Video", "Official audio", "/", "()"]
 
@@ -29,3 +30,10 @@ class StringUtils:
 
         print("Final result is {}".format(string))
         return string
+
+    def similarity_bigger_than_given(string_a, string_b, at_least):
+        if StringUtils.is_empty(string_a) and StringUtils.is_empty(string_b):
+            return True
+
+        ratio = fuzz.ratio(string_a, string_b)
+        return ratio >= at_least

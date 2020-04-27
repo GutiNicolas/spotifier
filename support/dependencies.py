@@ -2,3 +2,4 @@ dependencies = ['pip3 install --upgrade google-auth-oauthlib google-auth-httplib
 
 ## Se necesita youtube-dl  https://github.com/ytdl-org/youtube-dl
 ## Python requests library
+pip install fuzzywuzzy

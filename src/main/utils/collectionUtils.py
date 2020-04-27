@@ -1,15 +1,6 @@
 from collections.abc import Sequence
 from src.main.utils.stringUtils import StringUtils
 
-
-def stay_home_bummer():
-    pass
-
-
-def will_see(param):
-    pass
-
-
 class CollectionUtils:
 
     def none_empty(coll):
@@ -40,12 +31,3 @@ class CollectionUtils:
         if (StringUtils.is_empty(artist) or StringUtils.is_empty(song)):
             return None
         return str(artist).strip(), str(song).strip()
-
-    def aaa(self):
-        twenytweny = []
-
-        for month in twenytweny:
-            if month == 'April':
-                stay_home_bummer()
-            if month == 'May':
-                will_see('Be ready anyway')
